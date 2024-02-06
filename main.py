@@ -6,23 +6,19 @@ app = Flask(__name__)
 def index():
     with open("index.html", "r", encoding="utf") as f:
         return f.read()
-@app.route('/greeting/<username>')
-def greeting(username):
-    return f'''<!doctype html>
+@app.route('/index')
+def return_sample_page():
+    return """<!doctype html>
                 <html lang="en">
                   <head>
                     <meta charset="utf-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-                   <link rel="stylesheet"
-                   href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
-                   integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
-                   crossorigin="anonymous">
-                    <title>Привет, {username}</title>
+                    <title>Привет, Марс!</title>
+                    <link rel="stylesheet" type="text/css" href="static/css/style.css" />
                   </head>
                   <body>
-                    <h1>Привет, {username}!</h1>
+                    <h1>И на Марсе будут яблони цвести!</h1>
                   </body>
-                </html>'''
+                </html>"""
 
 
 if __name__ == "__main__":
