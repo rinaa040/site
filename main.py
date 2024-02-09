@@ -14,9 +14,9 @@ def training(prof):
     return render_template("trainings.html", prof=prof)
 
 
-@app.route('/list_prof/<list>')
-def list_prof(list):
-    return render_template("professions.html", list=list)
+@app.route('/list_prof/<lst>')
+def list_prof(lst):
+    return render_template("professions.html", list=lst)
 
 
 if __name__ == "__main__":

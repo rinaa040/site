@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Профессии</h1>
+{% set prof_list = ['Инженер', 'Строитель', 'Врач', 'Кирилл'] %}
+{% if "ul" in list %}
+<ul>
+    {% for user in prof_list %}
+    <li>{{ user }}</li>
+    {% endfor %}
+</ul>
+{% elif "ol" in list %}
+<ol>
+    {% for user in prof_list %}
+    <li>{{ user }}</li>
+    {% endfor %}
+</ol>
+{% else %}
+<h2>Вы не работаете на корабле, идите домой</h2>
+{% endif %}
+{% endblock %}
